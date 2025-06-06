@@ -6,10 +6,6 @@
     <title>Tabelas</title>
     <style>
 
-        * {
-            text-align: center;
-        }
-
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
@@ -17,7 +13,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
-
+            position: relative;
         }
 
         td, th {
@@ -25,13 +21,34 @@
             padding: 10px;
         }
 
+        .posicao {
+            text-align: center;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         td.num {
             text-align: right;
         }
 
         thead, tfoot {
-            background-color: gray;
+            background-color: #383838;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
+
+        tbody > tr:nth-child(odd) {
+            background-color: lightgray;
         }
 
     </style>
@@ -41,6 +58,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION
             THEAD
                 TR, TD, TH
             TBODY
@@ -49,146 +67,147 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Posição</th>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col" style="width: 50px;">Posição</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 90px;">População</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>1º</td>
+                <td class="posicao">1º</td>
                 <td>São Paulo</td>
                 <td class="num">45 973 194</td>
             </tr>
             <tr>
-                <td>2º</td>
+                <td class="posicao">2º</td>
                 <td>Minas Gerais</td>
                 <td class="num">21 322 691</td>
             </tr>
             <tr>
-                <td>3º</td>
+                <td class="posicao">3º</td>
                 <td>Rio de Janeiro</td>
                 <td class="num">17 219 679</td>
             </tr>
             <tr>
-                <td>4º</td>
+                <td class="posicao">4º</td>
                 <td>Bahia</td>
                 <td class="num">14 850 513</td>
             </tr>
             <tr>
-                <td>5º</td>
+                <td class="posicao">5º</td>
                 <td>Paraná</td>
                 <td class="num">11 824 665</td>
             </tr>
             <tr>
-                <td>6º</td>
+                <td class="posicao">6º</td>
                 <td>Rio Grande do Sul</td>
                 <td class="num">11 229 915</td>
             </tr>
             <tr>
-                <td>7º</td>
+                <td class="posicao">7º</td>
                 <td>Pernambuco</td>
                 <td class="num">9 539 029</td>
             </tr>
             <tr>
-                <td>8º</td>
+                <td class="posicao">8º</td>
                 <td>Ceará</td>
                 <td class="num">9 233 656</td>
             </tr>
             <tr>
-                <td>9º</td>
+                <td class="posicao">9º</td>
                 <td>Pará</td>
                 <td class="num">8 664 306</td>
             </tr>
             <tr>
-                <td>10º</td>
+                <td class="posicao">10º</td>
                 <td>Santa Catarina</td>
                 <td class="num">8 058 441</td>
             </tr>
             <tr>
-                <td>11º</td>
+                <td class="posicao">11º</td>
                 <td>Goiás</td>
                 <td class="num">7 350 483</td>
             </tr>
             <tr>
-                <td>12º</td>
+                <td class="posicao">12º</td>
                 <td>Maranhão</td>
                 <td class="num">7 010 960</td>
             </tr>
             <tr>
-                <td>13º</td>
+                <td class="posicao">13º</td>
                 <td>Amazonas</td>
                 <td class="num">4 281 209</td>
             </tr>
             <tr>
-                <td>14º</td>
+                <td class="posicao">14º</td>
                 <td>Paraíba</td>
                 <td class="num">4 145 040</td>
             </tr>
             <tr>
-                <td>15º</td>
+                <td class="posicao">15º</td>
                 <td>Espírito Santo</td>
                 <td class="num">4 102 129</td>
             </tr>
             <tr>
-                <td>16º</td>
+                <td class="posicao">16º</td>
                 <td>Mato Grosso</td>
                 <td class="num">3 836 399</td>
             </tr>
             <tr>
-                <td>17º</td>
+                <td class="posicao">17º</td>
                 <td>Rio Grande do Norte</td>
                 <td class="num">3 446 071</td>
             </tr>
             <tr>
-                <td>18º</td>
+                <td class="posicao">18º</td>
                 <td>Piauí</td>
                 <td class="num">3 375 646</td>
             </tr>
             <tr>
-                <td>19º</td>
+                <td class="posicao">19º</td>
                 <td>Alagoas</td>
                 <td class="num">3 220 104</td>
             </tr>
             <tr>
-                <td>20º</td>
+                <td class="posicao">20º</td>
                 <td>Distrito Federal</td>
                 <td class="num">2 982 818</td>
             </tr>
             <tr>
-                <td>21º</td>
+                <td class="posicao">21º</td>
                 <td>Mato Grosso do Sul</td>
                 <td class="num">2 901 895</td>
             </tr>
             <tr>
-                <td>22º</td>
+                <td class="posicao">22º</td>
                 <td>Sergipe</td>
                 <td class="num">2 291 077</td>
             </tr>
             <tr>
-                <td>23º</td>
+                <td class="posicao">23º</td>
                 <td>Rondônia</td>
                 <td class="num">1 746 227</td>
             </tr>
             <tr>
-                <td>24º</td>
+                <td class="posicao">24º</td>
                 <td>Tocantins</td>
                 <td class="num">1 577 342</td>
             </tr>
             <tr>
-                <td>25º</td>
+                <td class="posicao">25º</td>
                 <td>Acre</td>
                 <td class="num">880 631</td>
             </tr>
             <tr>
-                <td>26º</td>
+                <td class="posicao">26º</td>
                 <td>Amapá</td>
                 <td class="num">802 837</td>
             </tr>
             <tr>
-                <td>27º</td>
+                <td class="posicao">27º</td>
                 <td>Roraima</td>
                 <td class="num">716 793</td>
             </tr>
@@ -196,7 +215,7 @@
         <tfoot>
             <tr>
                 <th>----</th>
-                <th>Total de Habitantes</th>
+                <th  scope="row">Total de Habitantes</th>
                 <td class="num">212 583 750</td>
             </tr>
         </tfoot>
